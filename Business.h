@@ -9,7 +9,7 @@ using namespace Repository;
 namespace Controller{
   class CarController{
     public:
-      CarController();
+      CarController(CarRepo &_repo) : repo(_repo){};
 
       //methods of car repo
       void add(const Car &car);
@@ -31,6 +31,6 @@ namespace Controller{
       ~CarController();
 
     private:
-      CarRepo & _repo;
+      CarRepo & repo;
   };
 };

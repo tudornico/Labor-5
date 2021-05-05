@@ -12,6 +12,7 @@ Car::Car(const string & model, const string & brand, const string & fuel, const 
     this->price = price;
     this->power = power;
 }
+
 int Car::get_Power() {
     return this->power;
 }

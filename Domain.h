@@ -13,8 +13,11 @@ namespace Domain
     int get_Year();
     int get_Kilometers();
     int get_Price();
+    int get_Power();
+    string get_Fuel();
     void set_Kilometers(int _kilometers);
     void set_Price(int _price);
+    bool checker(Car other);
     friend ostream &operator<<(ostream &os, const Car &car);
     ~Car();
 
