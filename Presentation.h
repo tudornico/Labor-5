@@ -9,8 +9,8 @@ namespace UI{
     class Console
     {
     private:
-
-
+        vector<Client::Kunde> client_list;
+        CarController _ctrl;
         //methods of car repo
         void add(const Car &car);
         bool remove(const Car &car);
@@ -28,10 +28,12 @@ namespace UI{
         vector<Car> filterByAgeAndKilometers(int age, int kilometers);
         vector<Car> sortByPrice(int price);
         Car reader();
+        Client::Kunde find_client(string name);
     public:
-        CarController & _ctrl;
+        //CarController & _ctrl;
+        Console(CarController &ctrl) : _ctrl(ctrl) {};
         void manager_run();
         void customer_run(Client::Kunde client);
-
+        ~Console(){};
     };
-};
+}
